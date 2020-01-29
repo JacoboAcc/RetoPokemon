@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PokemonService } from '../services/pokemon.service';
+import { Router } from '@angular/router';
+import { Pokemon } from '../models/pokemon';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  pokemones: Array<Pokemon> = new Array<Pokemon>();
+
+  constructor(private pokemonInyectado: PokemonService, private Ruta: Router) { }
 
   ngOnInit() {
+    this.pokemonInyectado.leerApi().subscribe((pokemonDesdeApi) => {
+      this.pokemones = pokemonDesdeApi;
+    });
   }
 
 }
