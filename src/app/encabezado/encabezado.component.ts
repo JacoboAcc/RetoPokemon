@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EncabezadoComponent implements OnInit {
 
+  aux = '';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  buscarPokemon() {
+    console.log(this.aux);
   }
 
 }

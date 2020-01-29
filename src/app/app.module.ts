@@ -8,6 +8,7 @@ import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { PokemonService } from './services/pokemon.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DetallePokemonComponent } from './detalle-pokemon/detalle-pokemon.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DetallePokemonComponent } from './detalle-pokemon/detalle-pokemon.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [
