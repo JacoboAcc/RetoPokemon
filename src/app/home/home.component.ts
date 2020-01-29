@@ -20,4 +20,9 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  irDetalle(pokemon: Pokemon) {
+    this.pokemonInyectado.pokemon = pokemon;
+    this.Ruta.navigateByUrl('/detallePokemon');
+  }
+
 }

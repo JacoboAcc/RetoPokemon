@@ -3,33 +3,16 @@
 </div> -->
 
 <div class="container">
-    <div class="card-deck" *ngFor='let pokemon of pokemones'>
-        <div class="card card2">
-          <img [src]='pokemon.ThumbnailImage.url' class="card-img-top" alt="...">
+    <div class="row mt-4 mr-4 justify-content-center" >
+        <div class="card card2 col-lg-3 col-md-6 ml-2 card" *ngFor='let pokemon of pokemones' (click)="irDetalle(pokemon)">
+          <img [src]="pokemon.ThumbnailImage" class="card-img-top" alt="...">
           <div class="card-body">
+            <p class="card-text">{{pokemon.number}}</p>
             <h5 class="card-title">{{pokemon.name}}</h5>
             <h6 class="card-title">{{pokemon.type}}</h6>
-            <p class="card-text">{{pokemon.number}}</p>
+            <!-- <button >Detalles</button> -->
             <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
           </div>
         </div>
-        <!-- <div class="card card2">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">nombrePokemon</h5>
-            <h6 class="card-title">tipoPokemon</h6>
-            <p class="card-text">numeroPokemon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card card2">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">nombrePokemon</h5>
-            <h6 class="card-title">tipoPokemon</h6>
-            <p class="card-text">numeroPokemon</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div> -->
     </div>
 </div>
