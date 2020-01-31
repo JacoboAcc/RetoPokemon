@@ -9,13 +9,15 @@ import { PokemonService } from './services/pokemon.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DetallePokemonComponent } from './detalle-pokemon/detalle-pokemon.component';
 import { FormsModule } from '@angular/forms';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     EncabezadoComponent,
-    DetallePokemonComponent
+    DetallePokemonComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,7 @@ export class PokemonService {
     return this.http.get<Pokemon[]>('https://www.pokemon.com/el/api/pokedex/kalos');
   }
 
+  // Agregar favoritos a un arreglo
   agregarFav(pokemon: Pokemon) {
     this.favpokemon.push(pokemon);
     console.log(this.favpokemon);

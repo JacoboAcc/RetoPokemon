@@ -19,6 +19,7 @@ export class DetallePokemonComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Agregar favoritos a un arreglo
   agregarFav(pokemon) {
     window.alert('Pokemon agregado');
     this.pokemonInyectado.agregarFav(pokemon);
