@@ -8,11 +8,17 @@ import { Observable } from 'rxjs';
 })
 export class PokemonService {
 
+  favpokemon = [];
   pokemon: Pokemon = new Pokemon();
 
   constructor(private http: HttpClient) { }
 
   leerApi(): Observable<Pokemon[]> {
     return this.http.get<Pokemon[]>('https://www.pokemon.com/el/api/pokedex/kalos');
+  }
+
+  agregarFav(pokemon: Pokemon) {
+    this.favpokemon.push(pokemon);
+    console.log(this.favpokemon);
   }
 }
