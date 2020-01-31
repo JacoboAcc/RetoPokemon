@@ -18,4 +18,7 @@ export class DetallePokemonComponent implements OnInit {
   ngOnInit() {
   }
 
+  agregarFav(pokemon: Pokemon) {
+  }
+
 }

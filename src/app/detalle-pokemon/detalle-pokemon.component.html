@@ -1,1 +1,20 @@
-<p>{{pokemon.name}}</p>
+<div class="container">
+    <div class=" col-lg-3">
+        <img [src]="pokemon.ThumbnailImage" class="card-img-top" alt="...">
+        <p>{{pokemon.detailPageURL}}</p>
+        <p>{{pokemon.weight}}</p>
+        <p>{{pokemon.weakness}}</p>
+        <p>{{pokemon.number}}</p>
+        <p>{{pokemon.height}}</p>
+        <p>{{pokemon.collectibles_slug}}</p>
+        <p>{{pokemon.featured}}</p>
+        <p>{{pokemon.slug}}</p>
+        <p>{{pokemon.name}}</p>
+        <p>{{pokemon.ThumbnailAltText}}</p>
+        <p>{{pokemon.ThumbnailImage}}</p>
+        <p>{{pokemon.id}}</p>
+        <p>{{pokemon.type}}</p>
+        <button (click)="agregarFav()">Agregar a favoritos</button>
+    </div>
+</div>
+
