@@ -8,8 +8,10 @@ import { Observable } from 'rxjs';
 })
 export class PokemonService {
 
-  favpokemon = [];
-  pokemon: Pokemon = new Pokemon();
+  pokemon = new Pokemon();
+  pokemones = new Array<Pokemon>();
+  favpokemon = new Array<Pokemon>();
+  findPokemon = new Array<Pokemon>();
 
   constructor(private http: HttpClient) { }
 
@@ -20,6 +22,21 @@ export class PokemonService {
   // Agregar favoritos a un arreglo
   agregarFav(pokemon: Pokemon) {
     this.favpokemon.push(pokemon);
-    console.log(this.favpokemon);
   }
+
+  cargarPokemones() {
+    if (this.pokemones.length === 0) {
+      this.leerApi().subscribe((pokemonDesdeApi) => {
+        this.pokemones = pokemonDesdeApi;
+        this.findPokemon = this.pokemones;
+      });
+    }
+  }
+
+  filterPokemon(text: string) {
+    this.findPokemon = this.pokemones.filter(
+      pok => pok.name.toLowerCase().indexOf(text.toLowerCase()) !== -1 || pok.number.indexOf(text) !== -1
+    );
+  }
+
 }

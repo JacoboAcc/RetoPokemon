@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PokemonService } from '../services/pokemon.service';
+import { Pokemon } from '../models/pokemon';
 
 @Component({
   selector: 'app-favorites',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pokemonInyectado: PokemonService) { }
 
   ngOnInit() {
+    // console.log(this.pokemonInyectado.favpokemon);
   }
 
 }

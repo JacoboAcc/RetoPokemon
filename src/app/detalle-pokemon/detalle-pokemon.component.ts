@@ -10,17 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetallePokemonComponent implements OnInit {
 
-  pokemon: Pokemon = new Pokemon();
-
-  constructor(private route: ActivatedRoute, private pokemonInyectado: PokemonService, ) {
-    this.pokemon = this.pokemonInyectado.pokemon;
-   }
+  constructor(private route: ActivatedRoute, private pokemonInyectado: PokemonService) {}
 
   ngOnInit() {
   }
 
   // Agregar favoritos a un arreglo
-  agregarFav(pokemon) {
+  agregarFav(pokemon: Pokemon) {
     window.alert('Pokemon agregado');
     this.pokemonInyectado.agregarFav(pokemon);
   }

@@ -10,16 +10,10 @@ import { Pokemon } from '../models/pokemon';
 })
 export class HomeComponent implements OnInit {
 
-  pokemones: Array<Pokemon> = new Array<Pokemon>();
-
   constructor(private pokemonInyectado: PokemonService, private Ruta: Router, private Rute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.pokemonInyectado.leerApi().subscribe((pokemonDesdeApi) => {
-      this.pokemones = pokemonDesdeApi;
-    });
-    console.log(this.Ruta.navigate);
-    console.log(this.Rute.pathFromRoot);
+    this.pokemonInyectado.cargarPokemones();
   }
 
   irDetalle(pokemon: Pokemon) {
