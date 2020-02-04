@@ -1,15 +1,16 @@
-
 <div class="container">
-    <div class="row mt-4 mr-4 justify-content-center" >
-        <div class="card col-lg-3 col-md-6 ml-2 card" *ngFor='let favPokemon of pokemonInyectado.favpokemon'>
-          <img [src]="favPokemon.ThumbnailImage" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">{{favPokemon.number}}</p>
-            <h5 class="card-title">{{favPokemon.name}}</h5>
-            <h6 class="card-title">{{favPokemon.type}}</h6>
-            <!-- <button >Detalles</button> -->
-            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-          </div>
+  <div class="row mt-4 mr-4 justify-content-center" >
+    <div class="card col-lg-3 col-md-6 ml-2 bg-div" style="width: 18rem;" *ngFor='let favPokemon of pokemonInyectado.favpokemon'>
+      <img [src]="favPokemon.ThumbnailImage" class="card-img-top bg mt-3" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{favPokemon.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">N°: {{favPokemon.number}}</h6>
+        <p class="card-title">Tipo: {{favPokemon.type}}</p>
+        <div class="card-body">
+          <a class="btn btn-primary " (click)="deleteFav(favPokemon)">Eliminar</a>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+

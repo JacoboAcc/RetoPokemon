@@ -17,9 +17,8 @@ export class DetallePokemonComponent implements OnInit {
 
   // Agregar favoritos a un arreglo
   agregarFav(pokemon: Pokemon) {
-    window.alert('Pokemon agregado');
     this.pokemonInyectado.agregarFav(pokemon);
+    window.alert('Pokemon agregado');
   }
-
 
 }

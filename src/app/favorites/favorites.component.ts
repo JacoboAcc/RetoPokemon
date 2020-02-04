@@ -15,4 +15,9 @@ export class FavoritesComponent implements OnInit {
     // console.log(this.pokemonInyectado.favpokemon);
   }
 
+  deleteFav(pokemon: Pokemon) {
+    this.pokemonInyectado.deleteFav(pokemon);
+    window.alert('Pokemon eliminado');
+  }
+
 }

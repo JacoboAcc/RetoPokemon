@@ -1,20 +1,20 @@
 <div class="container">
-    <div class=" col-lg-3">
-        <button (click)="agregarFav(pokemonInyectado.pokemon)">Agregar a favoritos</button>
-        <img [src]="pokemonInyectado.pokemon.ThumbnailImage" class="card-img-top" alt="...">
-        <p>{{pokemonInyectado.pokemon.detailPageURL}}</p>
-        <p>{{pokemonInyectado.pokemon.weight}}</p>
-        <p>{{pokemonInyectado.pokemon.weakness}}</p>
-        <p>{{pokemonInyectado.pokemon.number}}</p>
-        <p>{{pokemonInyectado.pokemon.height}}</p>
-        <p>{{pokemonInyectado.pokemon.collectibles_slug}}</p>
-        <p>{{pokemonInyectado.pokemon.featured}}</p>
-        <p>{{pokemonInyectado.pokemon.slug}}</p>
-        <p>{{pokemonInyectado.pokemon.name}}</p>
-        <p>{{pokemonInyectado.pokemon.ThumbnailAltText}}</p>
-        <p>{{pokemonInyectado.pokemon.ThumbnailImage}}</p>
-        <p>{{pokemonInyectado.pokemon.id}}</p>
-        <p>{{pokemonInyectado.pokemon.type}}</p>
+    <div class="row mt-4 mr-4 justify-content-center" >
+        <div class="card col-lg-3 col-md-6 ml-2 bg-div" style="width: 18rem; ">
+            <img [src]="pokemonInyectado.pokemon.ThumbnailImage" class="card-img-top bg mt-3" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{pokemonInyectado.pokemon.name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">N°: {{pokemonInyectado.pokemon.number}}</h6>
+                <p class="card-title">{{pokemonInyectado.pokemon.type}}</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Id: {{pokemonInyectado.pokemon.id}}</li>
+                    <li class="list-group-item">Peso: {{pokemonInyectado.pokemon.weight}}</li>
+                    <li class="list-group-item">Debilidades: {{pokemonInyectado.pokemon.weakness}}</li>
+                    <li class="list-group-item">Altura: {{pokemonInyectado.pokemon.height}}</li>
+                </ul>
+                <a class="btn btn-primary" (click)="agregarFav(pokemonInyectado.pokemon)">Agregar a favoritos</a>
+            </div>
+        </div>
     </div>
 </div>
 

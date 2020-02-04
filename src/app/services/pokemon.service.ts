@@ -24,6 +24,12 @@ export class PokemonService {
     this.favpokemon.push(pokemon);
   }
 
+  deleteFav(pokemon: Pokemon) {
+    this.favpokemon.splice(this.favpokemon.indexOf(pokemon),1);
+    // console.log(this.favpokemon.indexOf(pokemon));
+    console.log(this.pokemon);
+  }
+
   cargarPokemones() {
     if (this.pokemones.length === 0) {
       this.leerApi().subscribe((pokemonDesdeApi) => {
